@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious-Food Blog Template</title>
+    <link rel="icon" href="img/logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        text-decoration: none;
+        margin: 0px;
+        /* padding: 0px;
+       box-sizing: border-box; */
+        */
+    }
+
+    .navbar {
+        background-color: white;
+        margin-bottom: 10px;
+        /* position: fixed; */
+        width: 97%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /* border: 1px solid red; */
+        padding-right: 15px;
+        padding-left: 15px;
+        height: 100px;
+    }
+
+    .navdiv {
+        margin-top: 45px;
+        /* margin-top: ; */
+        margin-left: 30px;
+        margin-right: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 30px;
+        /* padding-right: 40px; */
+        font-weight: bold;
+    }
+
+    .navimg {
+        padding-left: 130px;
+        margin-right: 0px;
+        vertical-align: middle;
+    }
+
+    li {
+        list-style: none;
+        font-weight: bolder;
+        display: inline-block;
+        /* text-decoration: none; */
+    }
+
+    li:hover {
+        text-shadow: 1px 3px 2px rgb(22, 104, 42);
+        font-size: large;
+
+        font-weight: bold;
+    }
+
+    li a {
+        color: rgb(20, 19, 19);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 22px;
+        margin-right: 30px;
+    }
+
+    .cen {
+        /* border: 1px solid red; */
+        height: 250px;
+        width: 40%;
+        /* margin-top: 150px; */
+        margin-left: 100px;
+        background-image: url(img/bg2.jpg.webp);
+        background-size: cover;
+        display: inline-block;
+        /* display: flex; */
+    }
+
+    .cen-2 {
+        /* border: 1px solid red; */
+        height: 250px;
+        width: 40%;
+        /* margin-top: 190px; */
+        margin-left: 60px;
+        /* padding-right: 20px; */
+        background-image: url(img/bg3.jpg.webp);
+        background-size: cover;
+        display: inline-block;
+        /* display: flex; */
+    }
+
+    .centext {
+        margin-left: 30px;
+        margin-top: 30px;
+        color: white;
+        font-size: x-large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /* padding-left: 40px; */
+    }
+
+    .centext-2 {
+        margin-left: 30px;
+        margin-top: 30px;
+        color: white;
+        font-size: x-large;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        /* padding-left: 40px; */
+    }
+
+    .btn {
+        color: rgb(253, 252, 249);
+        background-color: rgba(16, 236, 16, 0.911);
+        border: none;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: medium;
+        font-weight: lighter;
+        margin-top: 20px;
+        /* padding-top: 20px;
+        padding-bottom: 20px; */
+        padding: 10px;
+    }
+
+    .text-mid {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: large;
+        margin-top: 90px;
+        text-transform: capitalize;
+        margin-bottom: 50px;
+    }
+
+    .middle {
+        display: flex;
+        margin-left: 8px;
+        margin-bottom: 30px;
+        /* width: 90%; */
+        /* margin-bottom: 20px; */
+    }
+
+    .img-1 {
+        padding-right: 0px;
+        width: 400px;
+        margin-left: 30px;
+        border-bottom: 4px solid green;
+
+
+    }
+
+    .img-2 {
+        width: 400px;
+        margin-left: 30px;
+        border-bottom: 4px solid green;
+    }
+
+    .img-3 {
+        /* padding-right: 0px; */
+        width: 400px;
+        margin-left: 30px;
+        border-bottom: 4px solid green;
+
+    }
+
+    .mid-text {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: x-large;
+        margin-top: 10px;
+    }
+
+    .middle2 {
+        background-image: url(img/bg4.jpg);
+        background-size: cover;
+        height: 650px;
+
+
+    }
+
+    .mid2-text {
+        /* background: linear-gradient(#b1a1a100, #625e5e27);
+        backdrop-filter: blur(2px); */
+        color: white;
+
+        text-align: center;
+        padding-top: 250px;
+
+    }
+
+    .mid2-text>h2 {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 86px;
+        padding-bottom: 20px;
+        font-weight: bolder;
+    }
+
+    .mid2-text>p {
+        padding-left: 60px;
+        padding-right: 60px;
+
+    }
+     .middle4{
+        display: flex;
+        margin-right: 15px;
+        margin-top: 170px;
+        margin-bottom: 10px;
+        height: 550px;
+        width: 99%;
+        border-bottom:1px solid black ;
+     }
+     .one{
+        border: 8px solid rgb(107, 243, 73);
+        width: 55%;
+        height: 385px;
+        margin-left: 160px;
+        margin-top: 60px;
+        margin-right: 20px;
+     }
+     .mid-span{
+        /* padding-top: 50%; */
+        color: rgb(73, 248, 73);
+        font-size: 42px;
+        margin-left: 120px;
+        
+        
+     }
+     .mid-h4{
+        padding-left: 50px;
+        padding-right: 40px;
+        padding-top: 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: large;
+     }
+     .mid-p{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: large;
+        margin-top: 50px;
+        margin-left: 70px;
+     }
+     .form{
+        margin-left: 30px;
+        margin-top: 60px;
+        /* border: 1px solid green; */
+        width: 80%;
+        height: 400px;
+
+     }
+     .form-mid{
+        margin-top: 30px;
+        background-image: url(img/bg1\ \(1\).jpg);
+        background-size: cover;
+        height: 320px;
+        
+     }
+     .form>h2{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: x-large;
+        padding-top: 20px;
+
+     }
+     .delicious-add{
+        margin-top: 60px;
+        margin-right: 120px;
+        /* height: 100px; */
+     }
+     .mid-img{
+        height: 399px;
+     }
+     .input{
+        margin-top: 40px;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-left: 20px;
+        color: black;
+     }
+     .btn-mid{
+        margin-top: 20px;
+        margin-left: 20px;
+        padding: 20px;
+        background-color: green;
+        color: white;
+     }
+     .mid-4{
+        color: white;
+        margin-top: 20px;
+        font-weight: bold;
+        margin-left: 10px;
+     }
+     .foot{
+       margin-top: 30px;
+       margin-bottom: 30px;
+     }
+     .foot-img{
+        width: 185px;
+        /* margin-bottom: 20px; */
+     }
+     .foot-logo{
+        margin-top: 90px;
+        vertical-align: middle;
+        /* margin-bottom: 40px; */
+        margin-left: 40px;
+     }
+     .span-foot {
+      margin-left: 170px;
+      vertical-align: middle;
+      margin-bottom: 20px;
+      padding-bottom: 50px;
+      /* text-align: center; */
+     }
+    
+
+</style>
+
+<body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"> <img class="navimg" src="img/logo.png" alt=""></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Mega Menu</a></li>
+                <li><a href="#">Recipes</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav><br>
+    <br><br>
+    <!-- cen  -->
+    <div class="cen">
+        <div class="centext">
+            <h2>Strawberry Cake</h2>
+            <p>Simple & Delicios </p><br>
+            <button class="btn">See Full Recipe</button>
+        </div>
+    </div>
+    <div class="cen-2">
+        <div class="centext-2">
+            <h2>Chinesse Noodles</h2>
+            <p>Simple & Delicios </p><br>
+            <button class="btn">See Full Recipe</button>
+        </div>
+    </div>
+    <!-- middle  -->
+    <div class="text-mid">
+        <h2>The best Receipies</h2>
+    </div>
+    <div class="middle">
+
+        <div>
+            <img src="img/r1.jpg.webp" alt="" class="img-1">
+            <div>
+                <h4 class="mid-text">Sushi Easy Recipe</h4>
+            </div>
+        </div>
+        <div>
+            <img src="img/r2.jpg.webp" alt="" class="img-2">
+            <div>
+                <h4 class="mid-text">Homemade Burger</h4>
+            </div>
+        </div>
+        <div>
+            <img src="img/r3.jpg.webp" alt="" class="img-3">
+            <div>
+                <h4 class="mid-text">Vegan Smoothie</h4>
+                <!-- <i class="fa-solid fa-star"class="i"></i> -->
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+
+        <div>
+            <img src="img/r4.jpg.webp" alt="" class="img-1">
+            <div>
+                <h4 class="mid-text">Calabasa Soup</h4>
+            </div>
+        </div>
+        <div>
+            <img src="img/r5.jpg.webp" alt="" class="img-2">
+            <div>
+                <h4 class="mid-text">Homemade breakfast</h4>
+            </div>
+        </div>
+        <div>
+            <img src="img/r6.jpg.webp" alt="" class="img-3">
+            <div>
+                <h4 class="mid-text">Healthy Dry Fruit</h4>
+                <!-- <i class="fa-solid fa-star"class="i"></i> -->
+            </div>
+        </div>
+    </div>
+    <div class="middle2">
+        <div class="mid2-text">
+            <h2>Gluten Free Receipies</h2>
+            <p>Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque accumsan molestie <br> Vestibulum ante
+                ipsum a Curae; Cras sed accumsan neque. Ut vulputate, lectus vel aliquam congue, risus leo elementum
+                nibh
+            </p>
+            <button class="btn">Accept All Cookies</button>
+        </div><br>
+        
+        <div class="middle4">
+            <div class="one">
+                <span class="mid-span">"</span>
+                <h4 class="mid-h4">Nothing is better than going home to family and eating good food and relaxing</h4>
+                <p class="mid-p">John Smith</p>
+            </div>
+            <div>
+                <div class="form">
+                    <h2>Subscribe to our newsletter</h2>
+                    <form class="form-mid" >
+            
+                        <input type="email" name="email" class="input" placeholder="Subscribe to newsletter"><br>
+                        <button type="submit" class="btn-mid">Subscribe</button>
+                        <p class="mid-4">Fusce nec ante vitae lacus aliquet vulputate. Donec sceleri sque accumsan molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div>
+                <div class="delicious-add">
+                    <img src="img/add (1).png" alt="" class="mid-img">
+                </div>
+            </div>
+        </div>
+       <footer>
+        <div class="foot">
+            <div >
+                <img src="img/r1.jpg.webp" alt="" class="foot-img">
+                <img src="img/r4.jpg.webp" alt="" class="foot-img">
+                <img src="img/r6.jpg.webp" alt="" class="foot-img">
+                <img src="img/r2.jpg.webp" alt="" class="foot-img">
+                <img src="img/r5.jpg.webp" alt="" class="foot-img">
+                <img src="img/r3.jpg.webp" alt="" class="foot-img">
+                <img src="img/sr5.jpg.webp" alt="" class="foot-img" height="159px">
+                <!-- <img src="img/sr5.jpg.webp" alt="" class="foot-img" height="130px"> -->
+            </div>
+            <div class="foot-logo">
+                <img src="img/logo.png" alt="">
+                <span class="span-foot">Copyright ©2025 All rights reserved | This template is made with  by Colorlib</span>
+            </div>
+        </div>
+       </footer>
+
+</body>
+
+</html>
